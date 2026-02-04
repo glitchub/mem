@@ -121,6 +121,7 @@ int main(int argc, char* argv[])
         }
 
         // get value
+        if (!*p) goto choke;
         OP[ops].data = strtoull(p, &p, 0);
         if (*p) goto choke;
 
